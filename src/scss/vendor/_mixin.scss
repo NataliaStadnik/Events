@@ -1,0 +1,26 @@
+@use './vars' as *;
+
+@mixin title($a: 28px, $b: 34px) {
+  font-family: 'ABChanel', sans-serif;
+  color: $color-black;
+  font-weight: 300;
+  font-size: $a;
+  line-height: $b;
+  text-align: center;
+}
+
+@mixin fs-ABChanel-bold() {
+  font-family: 'ABChanel', sans-serif;
+  color: $color-white-100;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@mixin descr($a: 21px) {
+  font-family: 'TTCommons', sans-serif;
+  color: $color-black;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: $a;
+}

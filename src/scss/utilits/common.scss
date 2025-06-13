@@ -1,0 +1,108 @@
+@use '../vendor/vars' as *;
+@use '../vendor/fonts' as *;
+@use '../vendor/mixin' as *;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: $color-white-100;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:active,
+button:hover,
+button:focus,
+button:focus-visible {
+  outline: none;
+  cursor: pointer;
+}
+
+a:active,
+a:focus,
+a:hover,
+a:focus-visible {
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  width: 100%;
+  min-width: 390px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.pd-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 70px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding: 0 140px;
+    max-width: 1920px;
+  }
+
+  .pd-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}

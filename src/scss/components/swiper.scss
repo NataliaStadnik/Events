@@ -1,0 +1,42 @@
+.photo-swiper {
+  width: 100%;
+  padding-bottom: 41px;
+
+  &__slide {
+    background-position: center;
+    background-size: cover;
+    width: 359px;
+    height: 232px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black !important;
+}
+
+.principles__swiper-slide {
+  height: auto;
+}
+
+@media only screen and (min-width: 1440px) {
+  .photo-swiper {
+    width: 671px;
+    padding-bottom: 45px;
+    margin: 0;
+
+    &__slide {
+      height: 286px;
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}

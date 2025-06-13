@@ -1,0 +1,153 @@
+@use '../vendor/vars' as *;
+@use '../vendor/fonts' as *;
+@use '../vendor/mixin' as *;
+
+.achivements {
+  &__title {
+    @include title($b: 40px);
+    margin-bottom: 40px;
+    padding: 0 25px;
+  }
+
+  &__wrapper {
+    position: sticky;
+    margin-bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+    background-color: $color-white-100;
+  }
+
+  &__location {
+    padding-bottom: 25px;
+  }
+}
+
+.achivements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 38px;
+  margin-left: 18px;
+  border-left: 0.5px solid $color-black;
+
+  &__item:first-of-type .achivements-list__title {
+    &::before {
+      top: 0;
+      transform: translateY(0);
+    }
+
+    &::after {
+      top: 18px;
+    }
+  }
+
+  &__title {
+    @include title($a: 20px, $b: 30px);
+    position: relative;
+    text-align: left;
+    margin-bottom: 10px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 35px;
+      width: 35px;
+      top: 50%;
+      left: -56px;
+      border: 0.5px solid $color-black;
+      border-radius: 50px;
+      background-color: $color-white-100;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: -51px;
+      height: 17px;
+      width: 25px;
+      background-image: url('../assets/images/flower.svg');
+      background-size: 20px 17px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__descr {
+    @include descr($a: 25px);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .achivements {
+    &__container {
+      display: flex;
+      gap: 52px;
+      padding-top: 50px;
+    }
+
+    &__outer {
+      padding: 49px 140px 0 140px;
+      display: flex;
+      gap: 80px;
+    }
+
+    &__title {
+      margin-bottom: 70px;
+      font-size: 55px;
+      line-height: 78px;
+      text-align: left;
+      padding: 0;
+    }
+
+    &__wrapper {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      align-items: flex-start;
+      width: fit-content;
+    }
+  }
+
+  .container-outer {
+    padding: 0;
+  }
+
+  .achivements-list {
+    margin-top: 15px;
+    margin-left: -19px;
+    padding-left: 99px;
+    gap: 43px;
+
+    &__title {
+      max-width: 90%;
+      font-size: 22px;
+      line-height: 35px;
+
+      &:before {
+        height: 45px;
+        width: 45px;
+        top: 50%;
+        left: -121px;
+      }
+    }
+    &__descr {
+      line-height: 30px;
+    }
+
+    &__item {
+      .achivements-list__title::after {
+        left: -111px;
+      }
+
+      &:first-of-type .achivements-list__title::after {
+        top: 23px;
+      }
+    }
+  }
+}
